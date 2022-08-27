@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starts With Ends With</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="card border-primary mx-auto mt-3 mb-3" style="max-width: 25rem;" >
+        <div class="card-header border-primary bg-light text-dark "><h4>Starts With Ends With</h4></div>
+            <div class="card-body">
+                <form action="" method="post">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label lead" for="num1">Start</label>    
+                        </div>
+                        <div class="col">
+                         <input type="number" class="form-control" name="num1" id="num1" placeholder="Number" min="1">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label lead" for="num2">End</label>    
+                        </div>
+                        <div class="col">
+                         <input type="number" class="form-control" name="num2" id="num2" placeholder="Number" min="1">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" name="btn_submit"><h6>Submit</h6></button>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <div class="card fs-2 text-center border-primary mx-auto mt-3 mb-3" style="max-width: 25rem;" >
+        <?php
+            if(isset($_POST['btn_submit'])){
+                $num1 = $_POST['num1'];
+                $num2 = $_POST['num2'];
+
+                for($i=$num1; $i<=$num2; $i++){
+                echo"$i ";
+                }
+            }
+        ?>
+    </div> 
+ 
+</body>
+</html>
+
+<!-- <?php
+if(isset($_POST['btn_submit'])){
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+
+    for($i=$num1; $i<=$num2; $i++){
+        echo"$i";
+
+    }
+    }
+?> -->
